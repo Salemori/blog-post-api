@@ -10,7 +10,7 @@ const {
 } = require("../middleware/validationMiddleware");
 const { authToken } = require("../middleware/authMiddleware");
 
-const userRoute = express.Router();
+const userRouter = express.Router();
 
 /**
  * @swagger
@@ -56,7 +56,7 @@ const userRoute = express.Router();
  *       409:
  *         description: User already exists
  */
-userRoute.post("/register", validateSignUp, handleSignUp);
+userRouter.post("/register", validateSignUp, handleSignUp);
 
 /**
  * @swagger
@@ -89,7 +89,7 @@ userRoute.post("/register", validateSignUp, handleSignUp);
  *       409:
  *         description: User does not exist
  */
-userRoute.post("/login", validateLogin, handleLogin);
+userRouter.post("/login", validateLogin, handleLogin);
 
 /**
  * @swagger
@@ -107,6 +107,6 @@ userRoute.post("/login", validateLogin, handleLogin);
  *       404:
  *         description: User not found
  */
-userRoute.get("/profile", authToken, handleGetUserProfile);
+userRouter.get("/profile", authToken, handleGetUserProfile);
 
-module.exports = userRoute;
+module.exports = userRouter;
