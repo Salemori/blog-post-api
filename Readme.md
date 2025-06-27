@@ -2,7 +2,7 @@
 
 A RESTful API for managing authors and their blog posts using a relational one-to-many relationship.
 
-**Live URL:** [https://blog-post-api-jwdk.onrender.comcom](https://blog-post-api-jwdk.onrender.com)
+**Live URL:** [https://blog-post-api-jwdk.onrender.com](https://blog-post-api-jwdk.onrender.com)
 
 ## Features
 
