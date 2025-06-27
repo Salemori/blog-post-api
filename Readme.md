@@ -2,6 +2,8 @@
 
 A RESTful API for managing authors and their blog posts using a relational one-to-many relationship.
 
+**Live URL:** [https://blog-post-api-jwdk.onrender.comcom](https://blog-post-api-jwdk.onrender.com)
+
 ## Features
 
 - Create, read, update, and delete blog posts
@@ -50,9 +52,13 @@ A RESTful API for managing authors and their blog posts using a relational one-t
 ## Technologies Used
 
 - Node.js (Express)
-- MongoDB with Mongoose (or your chosen DB)
+- MongoDB with Mongoose
 - Express Validator or Mongoose validation
 - RESTful API conventions
 
 ---
 
+## API Documentation
+
+Access the live API documentation here:  
+**Swagger UI** → [https://blog-post-api-jwdk.onrender.com/api-docs/](https://blog-post-api-jwdk.onrender.com/api-docs/)
