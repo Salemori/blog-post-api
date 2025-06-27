@@ -21,7 +21,7 @@ const userRouter = express.Router();
 
 /**
  * @swagger
- *  /api/v1/register:
+ *  /api/v1/user/register:
  *   post:
  *     summary: Register a new user
  *     tags: [Auth]
@@ -60,7 +60,7 @@ userRouter.post("/register", validateSignUp, handleSignUp);
 
 /**
  * @swagger
- *  /api/v1/login:
+ *  /api/v1/user/login:
  *   post:
  *     summary: Login a user and return a JWT
  *     tags: [Auth]
@@ -93,7 +93,7 @@ userRouter.post("/login", validateLogin, handleLogin);
 
 /**
  * @swagger
- * /api/v1/profile:
+ * /api/v1/user/profile:
  *   get:
  *     summary: Get the currently logged in user's profile
  *     tags: [Auth]

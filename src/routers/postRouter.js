@@ -13,7 +13,7 @@ const blogRouter = express.Router();
 
 /**
  * @swagger
- * /api/v1/posts:
+ * /api/v1/posts/:
  *   get:
  *     summary: Get all blog posts
  *     tags: [Posts]
@@ -31,6 +31,7 @@ blogRouter.get("/", handleGetPosts);
  *   get:
  *     summary: Get a post by ID
  *     tags: [Posts]
+ *     security: [] 
  *     parameters:
  *       - in: path
  *         name: id
@@ -50,7 +51,7 @@ blogRouter.get("/:id", handleGetPostById);
 
 /**
  * @swagger
- * /api/v1/posts:
+ * /api/v1/posts/:
  *   post:
  *     summary: Create a new post
  *     tags: [Posts]
@@ -143,13 +144,6 @@ blogRouter.put("/:id", authToken, handleUpdatePost);
  *         description: Unauthorized
  */
 blogRouter.delete("/:id", authToken, handleDeletePost);
-
-
-
-
-
-
-
 
 
 module.exports = blogRouter;
