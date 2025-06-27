@@ -7,16 +7,17 @@ const blogRouter = express.Router();
 /**
  * @swagger
  * tags:
- *   name: Posts
+ *   name: Post
  *   description: Blog post management
  */
 
 /**
  * @swagger
- * /api/v1/posts/:
+ * /api/v1/post:
  *   get:
  *     summary: Get all blog posts
  *     tags: [Posts]
+ *     security: [] 
  *     responses:
  *       200:
  *         description: A list of blog posts
@@ -27,11 +28,12 @@ blogRouter.get("/", handleGetPosts);
 
 /**
  * @swagger
- * /api/v1/posts/{id}:
+ * /api/v1/post/{id}:
  *   get:
  *     summary: Get a post by ID
  *     tags: [Posts]
- *     security: [] 
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -51,7 +53,7 @@ blogRouter.get("/:id", handleGetPostById);
 
 /**
  * @swagger
- * /api/v1/posts/:
+ * /api/v1/post:
  *   post:
  *     summary: Create a new post
  *     tags: [Posts]
@@ -86,7 +88,7 @@ blogRouter.post("/", authToken, handleCreatePost);
 
 /**
  * @swagger
- * /api/v1/posts/{id}:
+ * /api/v1/post/{id}:
  *   put:
  *     summary: Update a post
  *     tags: [Posts]
@@ -122,7 +124,7 @@ blogRouter.put("/:id", authToken, handleUpdatePost);
 
 /**
  * @swagger
- * /api/v1/posts/{id}:
+ * /api/v1/post/{id}:
  *   delete:
  *     summary: Delete a post
  *     tags: [Posts]
